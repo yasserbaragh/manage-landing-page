@@ -1,0 +1,234 @@
+@include tablet {
+    #about {
+        .right {
+            display: flex;
+            gap: 20px;
+        }
+    }
+}
+@include pc {
+    header {
+        .logo {
+            padding-top: 10px;
+            img {
+                width: 200px;
+            }
+        }
+        padding-top: 30px;
+        .menu {
+            display: none;
+        }
+        .nav {
+            .list {
+                    list-style-type: none;
+                    height: 100px;
+                    width: 500px;
+                    padding-top: 30px;
+                    position: absolute;
+                    top: 10px;
+                    left: 50%;
+                    transform: translate(-50%, 0vh);
+                    padding-left: 0;
+                    text-align: center;
+                    visibility: visible;
+                    background-color: white;
+                    overflow: visible;
+                    transition: all 0.5s ease-in;
+                    
+        
+                    &__items {
+                        padding: 0px 10px;
+                        transform: translateX(0);
+                        display: inline;
+        
+                        &.open {
+                            transform: translateX(0);
+                            visibility: visible;
+                           
+                        }
+        
+                        &__link {
+                            text-decoration: none;
+                            color: $Dark-Blue;
+                            transition: all 0.5s ease-in;
+                        }
+                    }
+                }
+        
+                button {
+                    display: block;
+                    position: absolute;
+                    right: 5%;
+                    top: 30px;
+                }
+            
+        }
+    }
+    main {
+        
+        #home {
+            text-align: left;
+            margin-top: 100px;
+            .container {
+                .flex {
+                    margin: 0 auto;
+                    display: flex;
+                    flex-direction: row-reverse;
+
+                    &__item__a{
+                        width: 100vw;
+
+                        img {
+                            width: 600px;
+                        }
+                    }
+                    &__item__b{
+                        margin: auto 0;
+
+                        h1 {
+                            margin-top: 50px;
+                            letter-spacing: 0.1px;
+                            word-spacing: 1.9px;
+                            font-size: 3.5rem;
+                            margin-bottom: 50px;
+                        }
+                        p {
+                            font-size: 1.5rem;
+                            width: 57%;
+                            margin-bottom: 50px;
+                            margin-left: 0px;
+                        }
+                    }
+                }
+            }
+        }
+        #about {
+            text-align: left;
+            .container {
+                display: flex;
+    
+                .left {
+                    text-align: left;
+                    width: 47vw;
+                    h1 {
+                        width: 100%;
+                        font-size: 3rem;
+                        font-weight: weights(bold);
+                    }
+                    p {
+                        margin: 0;
+                        width: 75%;
+                        font-size: 1.4rem;
+                        line-height: 1.7;
+                        margin-top: 50px;
+                    }
+                }
+    
+                .right {
+                    display: block;
+                    width: 53vw;
+    
+                    .item {
+                        width: 80%;
+    
+                        .top {
+                            background-color: transparent;
+                            
+                            span {
+                                padding-left: 20px;
+                            }
+                            h2 {
+                                margin-left: 20px;
+                                font-size: 1.3rem;
+                                font-weight: 700;
+                            }
+                        }
+                        .bottom {
+                            padding-left: 16%;
+                        }
+                    }
+                }
+            }
+        }
+        #testimonials {
+            .testimonials {
+                display: grid;
+                grid-template-columns: repeat(4, 19vw);
+                column-gap: 10px;
+                margin-bottom: 60px;
+                justify-content: center;
+            }
+            .spans {
+                display: none;
+            }
+        }
+        #end {
+            text-align: left;
+            padding: 50px 0px;
+            .container {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 30px;
+                margin-top: 30px;
+
+                h1 {
+                    width: 50%;
+                    margin: 0;
+                }
+            }
+
+            h1 {
+                text-align: left;
+                font-size: 3rem;
+                width: 30vw;
+                font-weight: weights(medium);
+            }
+            button {
+                height: 50px;
+                align-self: center;
+            }
+        }
+    }
+    footer {
+        .container {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+
+            form {
+                margin-top: 20px;
+
+                input {
+                    padding: 10px 20px;
+                    border: none;
+                    margin-bottom: 40px;
+                    margin: 0 2px;
+
+                    input[type=email] {
+                        font-size: 1.1rem;
+                    }
+                    input[type=submit] {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+            .list {
+                flex: 1;
+                margin-left: 50px;
+            }
+            .item {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: space-between;
+            }
+            span {
+                position: absolute;
+                bottom: 50px;
+                left: 0;
+                right: 0;
+                text-align: left;
+                color: $Dark-Grayish-Blue;
+            }
+        }
+    }
+}

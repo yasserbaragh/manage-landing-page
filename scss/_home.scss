@@ -1,0 +1,121 @@
+header {
+    position: absolute;
+    padding: 10px;
+    width: 100vw;
+
+    .menu {
+        position: absolute;
+        top: 5px;
+        right: 15px;
+    }
+
+    .nav {
+        .list {
+            list-style-type: none;
+            height: 300px;
+            width: 85%;
+            padding-top: 50px;
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            transform: translate(-50%, -100vh);
+            padding-left: 0;
+            text-align: center;
+            visibility: hidden;
+            background-color: white;
+            overflow: hidden;
+            transition: all 0.5s ease-in;
+            
+
+            &.open {
+                visibility: visible;
+                transform: translate(-50%, 0);
+                box-shadow: $shadow;
+            }
+
+            &__items {
+                padding: 7px 0;
+                transform: translateX(100vw);
+                transition: all 0.5s ease-in;
+                transition-delay: 0.3s;
+
+                &.open {
+                    transform: translateX(0);
+                    visibility: visible;
+                   
+                }
+
+                &__link {
+                    text-decoration: none;
+                    color: $Dark-Blue;
+                    transition: all 0.5s ease-in;
+                    font-weight: weights(bold);
+                    transition: all 0.3s ease;
+                    transition-delay: none;
+            
+                    &:hover {
+                        opacity: 0.6;
+                    }
+                }
+            }
+        }
+
+        button {
+            display: none;
+            border-radius: 50px;
+            background-color: $Bright-Red;
+            padding: 10px 35px;
+            transition: all 0.5s ease;
+            
+            &:hover {
+                opacity: 0.7;
+                background-color: $Bright-Red;
+            }
+        }
+    }
+}
+main {
+    padding-top: 50px;
+
+    #home{
+        text-align: center;
+
+        .flex{
+            &__item__b{
+
+                img {
+                    margin: 0 auto;
+                }
+
+                h1{
+                    font-weight: weights(bold);
+                    color: $Dark-Blue;
+                    font-size: 2.2rem;
+                    margin-bottom: 20px;
+                }
+                p {
+                    width: 90%;
+                    margin: 0 auto;
+                    color: $Dark-Grayish-Blue;
+                    margin-bottom: 50px;
+                }
+                button {
+                    border-radius: 50px;
+                    background-color: $Bright-Red;
+                    padding: 10px 35px;
+                    transition: all 0.5s ease;
+            
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@for $i from 1 through 5 {
+    .list__items__link:nth-child(#{$i}) {
+        transition-delay: ($i * 0.1s) + 0.15s;
+    }
+}

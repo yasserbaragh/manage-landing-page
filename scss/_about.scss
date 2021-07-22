@@ -1,0 +1,61 @@
+main{
+    #about{
+        margin-top: 80px;
+        text-align: center;
+
+
+        .left {
+            margin-bottom: 50px;
+
+            h1 {
+                font-size: 2rem;
+                color:  $Dark-Blue;
+                font-weight: weights(bold);
+                margin-bottom: 20px;
+            }
+            p {
+                color: $Dark-Grayish-Blue;
+                font-size: 0.9rem;
+                width: 95%;
+                margin: 0 auto;
+            }
+        }
+        .right {
+            .item {
+                margin-bottom: 40px;
+
+                .top {
+                    background-color: $Very-Pale-Red;
+                    display: flex;
+                    height: 40px;
+                    border-radius: 50px 0 0 50px;
+                   
+                    h2 {
+                        font-size: 0.9rem;
+                        color: $Dark-Blue;
+                        font-weight: weights(bold);
+                        padding-top: 8px;
+                    }
+                    span {
+                        background-color: $Bright-Red;
+                        width: 60px;
+                        height: 40px;
+                        border-radius: 50px;
+                        padding-top: 8px;
+                        color: white;
+                    }
+                }
+                .bottom {
+                    padding: 10px 15px;
+                    p {
+                        text-align: left;
+                        color: $Dark-Grayish-Blue;
+                        font-size: 0.8rem;
+                        line-height: 1.7;
+                    }
+                }
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+ 
+body {
+    font-family: 'Be Vietnam', sans-serif;
+    font-size: 16px;
+}
+
+$Bright-Red: hsl(12, 88%, 59%);
+$Dark-Blue: hsl(228, 39%, 23%);
+
+$Dark-Grayish-Blue: hsl(227, 12%, 61%);
+$Very-Dark-Blue: hsl(233, 12%, 13%);
+$Very-Pale-Red: hsl(13, 100%, 96%);
+$Vary-Light-Gray: hsl(0, 0%, 98%);
+
+$shadow: 5px 5px 4px $Dark-Grayish-Blue;
+
+
+$font-weights: (
+    "regular": 400,
+    "medium": 500,
+    "bold": 700
+);
+ 
+
+@function weights($weight-name) {
+    @return map-get($font-weights , $weight-name);
+};
+
+@mixin tablet {
+    @media(min-width: 768px) {
+        @content
+    }
+};
+
+@mixin pc {
+    @media(min-width:992px) {
+        @content
+    }
+};
+
+button {
+    padding: 10px 20px;
+    height: 50px;
+    border: none;
+    border-radius: 50px;
+    background-color: $Bright-Red;
+    
+}

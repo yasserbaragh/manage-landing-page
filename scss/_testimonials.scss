@@ -1,0 +1,74 @@
+main {
+    #testimonials {
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+
+        h1{
+            font-weight: weights(bold);
+            color: $Dark-Blue;
+            margin-bottom: 80px;
+        }
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(4, 90vw);
+            column-gap: 100px;
+            height: 100%;
+            padding-top: 50px;
+            position: relative;
+        }
+        .testimonial {
+            padding: 10px 20px;
+            background-color: $Vary-Light-Gray;
+            margin-bottom: 20px;
+            position: relative;
+
+            img {
+                width: 55px;
+                position: absolute;
+                top: -30px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            h2 {
+                margin-top: 30px;
+                font-size: 1rem;
+                font-weight: weights(bold);
+                color: $Dark-Blue;
+            }
+            p {
+                font-size: 0.8rem;
+                color: $Dark-Grayish-Blue;
+            }
+        }
+       .spans {
+           display: flex;
+           justify-content: center;
+           gap: 10px;
+           margin-bottom: 20px;
+           
+           span {
+               border: 1px solid $Bright-Red;
+               border-radius: 50%;
+               height: 10px;
+               width: 10px;
+
+               &.active {
+                   background-color: $Bright-Red;
+               }
+           }
+           
+       }
+       button {
+        border-radius: 50px;
+        background-color: $Bright-Red;
+        padding: 10px 35px;
+        border: none;
+        transition: all 0.5s ease;
+            
+        &:hover {
+            opacity: 0.7;
+        }
+       }
+    }
+}
