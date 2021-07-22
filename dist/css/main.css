@@ -113,6 +113,9 @@ main {
 
 main #home {
   text-align: center;
+  background: url(../images/bg-tablet-pattern.svg) no-repeat;
+  background-size: contain;
+  background-position: 100px -50px;
 }
 
 main #home .flex__item__b img {
@@ -173,6 +176,9 @@ main #home .flex__item__b button:hover {
 main #about {
   margin-top: 80px;
   text-align: center;
+  background: url(../images/bg-tablet-pattern.svg) no-repeat;
+  background-size: contain;
+  background-position: 200px -100px;
 }
 
 main #about .left {
@@ -386,6 +392,8 @@ main #testimonials button:hover {
   main #home {
     text-align: left;
     margin-top: 100px;
+    background-size: 700px;
+    background-position: 785px -155px;
   }
   main #home .container .flex {
     margin: 0 auto;
@@ -421,6 +429,8 @@ main #testimonials button:hover {
   }
   main #about {
     text-align: left;
+    background-size: 700px;
+    background-position: -221px 194px;
   }
   main #about .container {
     display: -webkit-box;
