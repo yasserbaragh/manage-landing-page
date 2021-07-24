@@ -106,16 +106,24 @@ header .nav button:hover {
   opacity: 0.7;
   background-color: #f25f3a;
 }
-
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../images/bg-tablet-pattern.svg) no-repeat;
+  background-size: contain;
+  background-position: 650px -100px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
 main {
   padding-top: 50px;
 }
 
 main #home {
   text-align: center;
-  background: url(../images/bg-tablet-pattern.svg) no-repeat;
-  background-size: contain;
-  background-position: 100px -50px;
+  
 }
 
 main #home .flex__item__b img {
@@ -252,15 +260,7 @@ main #testimonials h1 {
 }
 
 main #testimonials .testimonials {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (90vw)[4];
-      grid-template-columns: repeat(4, 90vw);
-  -webkit-column-gap: 100px;
-          column-gap: 100px;
-  height: 100%;
   padding-top: 50px;
-  position: relative;
 }
 
 main #testimonials .testimonial {
@@ -300,16 +300,12 @@ main #testimonials .spans {
           justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
+  width: 100vw;
+  margin-top: 20px;
 }
 
-main #testimonials .spans span {
-  border: 1px solid #f25f3a;
-  border-radius: 50%;
-  height: 10px;
-  width: 10px;
-}
-
-main #testimonials .spans span.active {
+main #testimonials .swiper-pagination-bullet {
+  border: #f25f3a;
   background-color: #f25f3a;
 }
 
@@ -320,6 +316,7 @@ main #testimonials button {
   border: none;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  margin-top: 80px;
 }
 
 main #testimonials button:hover {
@@ -334,7 +331,10 @@ main #testimonials button:hover {
     gap: 20px;
   }
 }
-
+.swiper-button-prev, .swiper-button-next {
+  color: #f25f3a;
+  display: none;
+}
 @media (min-width: 992px) {
   header {
     padding-top: 30px;
@@ -474,20 +474,12 @@ main #testimonials button:hover {
   main #about .container .right .item .bottom {
     padding-left: 16%;
   }
-  main #testimonials .testimonials {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (19vw)[4];
-        grid-template-columns: repeat(4, 19vw);
-    -webkit-column-gap: 10px;
-            column-gap: 10px;
-    margin-bottom: 60px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+  
   main #testimonials .spans {
     display: none;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    display: block;
   }
   main #end {
     text-align: left;

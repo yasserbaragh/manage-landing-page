@@ -22,7 +22,7 @@ menu.onclick = function () {
     })
     }    
 }
-
+/*
 const testimonials = document.querySelector(".testimonials");
 const children = document.querySelectorAll(".testimonial")
 const array = Array.from(children);
@@ -70,6 +70,30 @@ testimonials.addEventListener('touchend', function  (evt) {
     }
 });
 
+*/
+
+
+// email 
+
+const form = document.getElementById("form");
+const email = document.querySelector(".email");
+const erreur = document.querySelector(".hidden");
+console.log(erreur.innerHTML)
+
+function isEmail(email){
+    const emailRegex= /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return emailRegex.test(email) ;
+}
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+     
+    if(!isEmail(email.value)) {
+        erreur.classList.remove("hidden");
+        console.log(email.classList)
+    } else {
+        erreur.classList.add("hidden")
+    }
+})
 
 
 
